@@ -640,8 +640,10 @@ function parseResponse({ browser, history, document, response }) {
       document.close();
 
       browser.emit('loaded', document);
-      if (response.status >= 400)
+
+      if (response.status >= 400 && !browser.continueOnError) 
         throw new Error(`Server returned status code ${response.status} from ${response.url}`);
+        
       if (!document.documentElement)
         throw new Error(`Could not parse document at ${response.url}`);
 

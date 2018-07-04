@@ -31,7 +31,7 @@ const VERSION = require(`${__dirname}/../package.json`).version;
 // Browser options you can set when creating new browser, or on browser instance.
 const BROWSER_OPTIONS  = ['features', 'headers', 'waitDuration',
                           'proxy', 'referrer', 'silent', 'site', 'strictSSL', 'userAgent',
-                          'language', 'runScripts', 'localAddress'];
+                          'language', 'runScripts', 'localAddress', 'continueOnError'];
 
 // These features are set on/off by default.
 // Note that default values are actually prescribed where they are used,
